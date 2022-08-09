@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.dragon2.User">
+        <property name="name" value="张三"/>
+    </bean>
+
+    <!--
+    constructor-arg index
+    constructor-arg name
+    -->
+    <bean id="userCon" class="com.dragon2.User">
+        <constructor-arg index="0" value="张三 With Con"/>
+    </bean>
+
+    <!--Static Factory Methord-->
+    <bean id="userFac" class="com.dragon2.UserStaticFactory" factory-method="newInstance">
+        <constructor-arg index="0" value="Wang Wu"></constructor-arg>
+    </bean>
+
+    <!--Dynamic Factory Methord-->
+    <bean id="dynamicFac" class="com.dragon2.UserDynamicFactory"></bean>
+
+    <bean id="userDynamicFac" class="com.dragon2.User" factory-method="newInstance" factory-bean="dynamicFac">
+        <constructor-arg index="0" value="Dynamic 5"></constructor-arg>
+    </bean>
+
+</beans>
