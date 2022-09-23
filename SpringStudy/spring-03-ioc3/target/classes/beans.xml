@@ -20,6 +20,7 @@
         <constructor-arg index="0" value="Wang Wu"></constructor-arg>
     </bean>
 
+    <!--Dynamic Factory Methord-->
     <bean id="dynamicFac" class="com.dragon2.UserDynamicFactory"></bean>
 
     <bean id="userDynamicFac" class="com.dragon2.User" factory-method="newInstance" factory-bean="dynamicFac">
