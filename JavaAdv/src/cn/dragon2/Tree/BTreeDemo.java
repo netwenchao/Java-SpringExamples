@@ -5,13 +5,16 @@ import java.util.Arrays;
 public class BTreeDemo {
 
 	public static void main(String[] args) {
-		BTree<Integer> score = new BTree<Integer>();
-		score.add(0);
-		score.add(10);
-		score.add(4);
-		score.add(9);
-		score.add(1);
-		
+		BTree<Character> score = new BTree<Character>();
+		score.add('H');
+		score.add('C');
+		score.add('B');
+		score.add('D');
+		score.add('A');
+		score.add('E');
+		score.add('S');
+		score.add('Z');
+
 		System.out.println(Arrays.toString(score.toArray()));
 
 	}
