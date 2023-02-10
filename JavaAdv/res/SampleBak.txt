@@ -1,0 +1,2 @@
+This is test string using'OutputStreamWriter'
+This is string using FileWriter.结束
